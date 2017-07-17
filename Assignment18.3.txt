@@ -1,0 +1,51 @@
+HBase shell commands:
+
+● version: 
+This command returns the version of HBase used in your system. Example:
+version
+
+● DDL commands: 
+DDL commands are also called admin commands as it uses the database to do operations on the table and not inside the table. Example:
+list
+
+● Create table:
+Create table is used to create the table in Hbase. Example:
+create 'customer', 'address', 'order'
+
+● Alter table
+Alter table is used to modify the structure of table in Hbase. Example:
+alter 'customer', NAME=>'address', VERSIONS=>5
+
+● Describe
+Gives details of the table. Example:
+describe 'customer'
+
+● Drop table
+Drop the named table. Table must first be disabled. Example:
+disable 'customer'
+drop 'customer'
+
+● List
+List all tables in Hbase. Example:
+list
+
+● Is Enabled
+verifies if named table is enabled and returns true/false accordingly Example:
+is_enabled 'clicks'
+
+● Truncate
+Disables, drops and recreates the specified table. Example:
+truncate 'clicks'
+
+● put
+Insert or update the record in the table. Example:
+put 'customer','Finch','address:city','Newyork'
+put 'customer','Finch','address:city','Detroit'
+
+● Get
+Gets the record in the table. Example:
+get 'customer','Finch','address'
+
+● Scan
+We can see the content of table. Example:
+scan 'customer'
